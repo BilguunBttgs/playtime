@@ -1,0 +1,68 @@
+.loader {
+  border: 10px solid rgb(84, 84, 84);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-top: 10px solid orange;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ball {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  border-radius: 50%;
+  animation: bounce 3s linear infinite;
+}
+.shadow {
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  animation: shadow-move 3s linear infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(200px, -200px);
+  }
+  50% {
+    transform: translate(400px, 0px);
+  }
+  75% {
+    transform: translate(600px, -200px);
+  }
+  100% {
+    transform: translate(800px, 0px);
+  }
+}
+
+@keyframes shadow-move {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(200px) scale(0.5);
+  }
+  50% {
+    transform: translate(400px);
+  }
+  75% {
+    transform: translate(600px) scale(0.5);
+  }
+  100% {
+    transform: translate(800px);
+  }
+}
